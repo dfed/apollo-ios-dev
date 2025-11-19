@@ -23,7 +23,7 @@ extension ApolloCodegen {
       switch self {
       case let .graphQLSourceValidationFailure(lines):
         return """
-          An error occured during validation of the GraphQL schema or operations! Check \(lines)
+          An error occured during validation of the GraphQL schema or operations! Check \n\t\(lines.joined(separator: "\n\t"))
           """
       case .testMocksInvalidSwiftPackageConfiguration:
         return """
